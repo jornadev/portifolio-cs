@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(/img/bg.jpg);
+    font-family: Arial, sans-serif;
+    background-color: #ec981a83;
+    color: #333;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #E38617;
+    color: rgb(0, 0, 0);
+    padding: 20px 40px;
+}
+
+header .logo img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+
+header .nome-jogo {
+    font-size: 2.5rem;
+    text-align: center;
+    flex-grow: 1;
+}
+
+header .menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header .menu ul li {
+    display: inline;
+}
+
+header .menu ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+header .menu ul li a:hover {
+    color: #ffffff;
+}
+
+#informacoes-tecnicas, #funcionalidades {
+    margin-bottom: 40px;
+    background-color: #3b415c;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; 
+    display: flex; 
+    justify-content: center; 
+    flex-direction: column; 
+}
+
+#informacoes-tecnicas .conteudo, #funcionalidades .conteudo {
+    max-width: 900px; 
+    width: 100%; 
+    text-align: center; 
+}
+
+#informacoes-tecnicas h2, #funcionalidades h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #ffffffb6;
+    text-align: center; 
+}
+
+#informacoes-tecnicas ul, #funcionalidades ul {
+    list-style: none;
+    font-size: 1rem;
+    padding-left: 0;
+    text-align: center;
+}
+
+#informacoes-tecnicas li, #funcionalidades li {
+    margin-bottom: 20px;
+    color: #ffffffb6;
+}
+
+#informacoes-tecnicas strong, #funcionalidades strong {
+    color: #ffffffb6;
+}
+
+.carrossel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.navegacao {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.navegacao label {
+    width: 15px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input#slide1-1:checked ~ .slides {
+    transform: translateX(0);
+}
+
+input#slide1-2:checked ~ .slides {
+    transform: translateX(-100%);
+}
+
+input#slide1-3:checked ~ .slides {
+    transform: translateX(-200%);
+}
+
+input#slide1-4:checked ~ .slides {
+    transform: translateX(-300%);
+}
+
+input#slide1-5:checked ~ .slides {
+    transform: translateX(-400%);
+}
+
+input#slide1-6:checked ~ .slides {
+    transform: translateX(-500%);
+}
+
+input#slide2-1:checked ~ .slides {
+    transform: translateX(0);
+}
+
+input#slide2-2:checked ~ .slides {
+    transform: translateX(-100%);
+}
+
+input#slide2-3:checked ~ .slides {
+    transform: translateX(-200%);
+}
+
+input#slide2-4:checked ~ .slides {
+    transform: translateX(-300%);
+}
+
+input#slide2-5:checked ~ .slides {
+    transform: translateX(-400%);
+}
+
+input#slide2-6:checked ~ .slides {
+    transform: translateX(-500%);
+}
+
+input#slide1-1:checked ~ .navegacao label[for="slide1-1"],
+input#slide1-2:checked ~ .navegacao label[for="slide1-2"],
+input#slide1-3:checked ~ .navegacao label[for="slide1-3"],
+input#slide1-4:checked ~ .navegacao label[for="slide1-4"],
+input#slide1-5:checked ~ .navegacao label[for="slide1-5"],
+input#slide1-6:checked ~ .navegacao label[for="slide1-6"] {
+    background-color: white;
+}
+
+input#slide2-1:checked ~ .navegacao label[for="slide2-1"],
+input#slide2-2:checked ~ .navegacao label[for="slide2-2"],
+input#slide2-3:checked ~ .navegacao label[for="slide2-3"],
+input#slide2-4:checked ~ .navegacao label[for="slide2-4"],
+input#slide2-5:checked ~ .navegacao label[for="slide2-5"],
+input#slide2-6:checked ~ .navegacao label[for="slide2-6"] {
+    background-color: white;
+}
+
+#galeria1 h2, #galeria2 h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-align: center; 
+    width: 100%; 
+}
+
+.navegacao label:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+#acao {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.botao-acao {
+    background-color: #E38617;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.botao-acao:hover {
+    background-color: #333;
+}
+
+footer {
+    background-color: #E38617;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 20px;
+}
