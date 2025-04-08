@@ -275,3 +275,27 @@ footer {
 footer p {
     font-size: 20px;
 }
+
+#voltar-topo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #3b415cae;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    display: none;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+#voltar-topo:hover {
+    background-color: #333;
+}
+
+#titulo-jogo {
+    transition: opacity 2s ease-in-out;
+}
+
